@@ -33,7 +33,7 @@ jobs:
         uses: mayurrawte/github-angular-actions@latest
       - run: npm install  
       - name: Build
-        run: ng build
+        run: ng build --base-href /angular-test/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
