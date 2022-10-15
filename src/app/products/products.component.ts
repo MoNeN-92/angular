@@ -11,6 +11,9 @@ export class ProductsComponent implements OnInit {
   constructor(
     private activeRouter: ActivatedRoute,
     private Router: Router,
+ 
+
+   
   ) { }
 
   id = this.activeRouter.snapshot.params['id']
@@ -21,6 +24,13 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
     this.product = this.product.find((el: any) => {
       return el.id == this.id;
+      
+
+    })
+ 
+    this.product.poster = this.product.poster.find((el: any) => {
+      return el.poster == this.poster;
+      
 
     })
 
@@ -40,6 +50,8 @@ Endurance rating 61h`,
       poster: 'https://i.insider.com/540f3701eab8eaf81065a627?width=700',
       active: true,
     },
+    
+    
     {
       id: 7,
       title: 'iphone 7',
@@ -168,6 +180,4 @@ Endurance rating 61h`,
   
 
 
-}
-
-
+};
